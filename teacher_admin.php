@@ -13,11 +13,6 @@
 	<!--Icons-->
 	<script src="js/lumino.glyphs.js"></script>
 
-	<!--[if lt IE 9]>
-<script src="js/html5shiv.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]-->
-
 </head>
 
 <body>
@@ -32,7 +27,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#"><span>Teacher_</span>Admin</a>
-				<a class="navbar-brand" href="index.html"><span>home</span></a>
+				<a class="navbar-brand" href="index.php"><span>home</span></a>
 				<ul class="user-menu">
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user">
@@ -45,9 +40,15 @@
 							<li><a href="#"><svg class="glyph stroked gear">
 										<use xlink:href="#stroked-gear"></use>
 									</svg> Settings</a></li>
-							<li><a href="#"><svg class="glyph stroked cancel">
-										<use xlink:href="#stroked-cancel"></use>
-									</svg> Logout</a></li>
+							<?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
+								<li><a href="logout.php"><svg class="glyph stroked cancel">
+											<use xlink:href="#stroked-cancel"></use>
+										</svg> Logout</a></li>
+							<?php else: ?>
+								<li><a href="login.php"><svg class="glyph stroked cancel">
+											<use xlink:href="#stroked-cancel"></use>
+										</svg> Logout</a></li>
+							<?php endif; ?>
 						</ul>
 					</li>
 				</ul>
@@ -66,6 +67,22 @@
 			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial">
 						<use xlink:href="#stroked-dashboard-dial"></use>
 					</svg> Dashboard</a></li>
+			<li><a href="#"><svg class="glyph stroked pencil">
+						<use xlink:href="#stroked-pencil"></use>
+					</svg> View Course</a></li>
+			<li><a href="#"><svg class="glyph stroked trash">
+						<use xlink:href="#stroked-trash"></use>
+					</svg> Edit Course Info</a></li>
+			<li><a href="#"><svg class="glyph stroked-calendar">
+						<use xlink:href="#stroked-calendar"></use>
+					</svg> View Class Schedule</a></li>
+			<li><a href="#"><svg class="glyph stroked calendar">
+						<use xlink:href="#stroked-calendar"></use>
+					</svg> Edit Class Schedule</a></li>
+			<li><a href="#"><svg class="glyph stroked app-window">
+						<use xlink:href="#stroked-app-window"></use>
+					</svg> View Student Info</a></li>
+			<li class="parent ">
 		</ul>
 
 	</div><!--/.sidebar-->
@@ -149,9 +166,9 @@
 			</div>
 		</div><!--/.row-->
 
-		
-			</div><!--/.col-->
-		</div><!--/.row-->
+
+	</div><!--/.col-->
+	</div><!--/.row-->
 	</div> <!--/.main-->
 
 	<script src="js/jquery-1.11.1.min.js"></script>
@@ -162,20 +179,19 @@
 	<script src="js/easypiechart-data.js"></script>
 	<script src="js/bootstrap-datepicker.js"></script>
 	<script>
-		$('#calendar').datepicker({
-		});
+		$('#calendar').datepicker({});
 
-		!function ($) {
-			$(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+		! function($) {
+			$(document).on("click", "ul.nav li.parent > a > span.icon", function() {
 				$(this).find('em:first').toggleClass("glyphicon-minus");
 			});
 			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
 		}(window.jQuery);
 
-		$(window).on('resize', function () {
+		$(window).on('resize', function() {
 			if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
 		})
-		$(window).on('resize', function () {
+		$(window).on('resize', function() {
 			if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 		})
 	</script>

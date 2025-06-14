@@ -1,2 +1,0 @@
-# srs
-student registration system
