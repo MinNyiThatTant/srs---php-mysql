@@ -1,7 +1,7 @@
 # SRS ➔ ReadMe
 
 **Student Registration System Demo အသုံးပြုနည်း**  
-<p align="right"><a href="https://www.youtube.com/@MinNyiThatTant" — Min Nyi That Tant</a></p>
+<p align="right"><a href="https://www.youtube.com/@MinNyiThatTant"> — Min Nyi That Tant</a></p>
 
 ## လိုအပ်သော softwares
 Student Registration System - SRS web page ကို အသုံးပြုရန် လိုအပ်သော Softwaresများ
