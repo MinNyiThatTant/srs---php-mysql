@@ -1,7 +1,7 @@
 # SRS ➔ ReadMe
 
 **Student Registration System Demo အသုံးပြုနည်း**  
-— [Min Nyi That Tant](https://www.youtube.com/@MinNyiThatTant)
+<p align="right"><a href="https://www.youtube.com/@MinNyiThatTant">Min Nyi That Tant</a></p>
 
 ## လိုအပ်သော softwares
 Student Registration System - SRS web page ကို အသုံးပြုရန် လိုအပ်သော Softwaresများ
@@ -30,4 +30,4 @@ Admin Login ဝင်ဖို့အတွက် *Global_admin* ရဲ့ userna
 Username: **_minnyi_**  
 Password: **_mntt12345_**
 
-— Thank you.
+<p align="right">— Thank you.</p>
