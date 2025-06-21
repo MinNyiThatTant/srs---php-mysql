@@ -27,7 +27,7 @@ Xampp software ကို Computer မှဖွင့်၍ Apache နှင့�
 
 ### [ Global admin user account ]
 Admin Login ဝင်ဖို့အတွက် *Global_admin* ရဲ့ username, password လေးပါ။  
-Username: **_minnyi_**  
+Username: **_global_**  
 Password: **_mntt12345_**
 
 <p align="right">— Thank you.</p>
